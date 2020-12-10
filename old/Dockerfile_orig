@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get upgrade && apt-get install -y \
+    	    wget \
+	    openssh-server
+
+ENTRYPOINT ufw allow ssh && service ssh restart && bash

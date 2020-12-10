@@ -1,0 +1,4 @@
+
+
+docker tag ubuntu_ssh:18.04 goodsy/ubuntu_ssh:18.04
+docker push goodsy/ubuntu_ssh:18.04
