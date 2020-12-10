@@ -6,6 +6,7 @@ RUN apt-get install -y openssh-server
 
 RUN mkdir /var/run/sshd
 
+# Set initial password for root to 'root':
 RUN echo 'root:root' | chpasswd
 
 RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
